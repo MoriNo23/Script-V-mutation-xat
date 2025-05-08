@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ASX HELPER</title>
+  <style>
+    body {
+
+      background-color: #444;
+    }
+
+    #container {
+      background-color: #80a65b;
+      color: #21221f;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 327px;
+      border-radius: 30px;
+    }
+
+    h1 {
+      width: 100%;
+      text-align: center;
+      background: #444;
+      margin-top: 0;
+      color: #80a65b;
+      display: block;
+    }
+
+    main {
+      font-family: palatino, sans-serif;
+    }
+
+    button {
+      background: #3c3c3c;
+      border: none;
+      border-radius: 20px;
+      height: 30px;
+      color: #d7d7d7;
+      font-weight: bolder;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+
+    input {
+      background: #3c3c3c;
+      color: #eee;
+      border-radius: 20px;
+      border: none;
+      height: 30px;
+      transform: translatex(-63px);
+      transition: all 0.3s linear;
+    }
+
+
+    #miform {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: bolder;
+      color: beige;
+      background: #47622d;
+      border-radius: 20px;
+      padding-left: 7px;
+    }
+
+    button:hover {
+      background: azure;
+      color: #8e8e8e;
+    }
+
+    input:hover {
+      transform: translatex(0px);
+    }
+
+    #reset {
+      width: 100%;
+      margin-top: 5px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <main>
+    <div id="container">
+      <h1>ASX HELPER</h1>
+      <div id="content">
+        <form id="miform">
+          <label for="buscar1">
+            Buscar1<input type="text" id="buscar1" name="buscar1">
+          </label><br>
+          <label for="buscar2">
+            Buscar2<input type="text" id="buscar2" name="buscar2">
+          </label><br>
+          <label for="buscar3">
+            Mensaje<input type="text" id="buscar3" name="buscar3">
+          </label><br>
+          <button type="submit">Enviar</button>
+        </form>
+        <button id="reset">Reset</button>
+      </div>
+    </div>
+  </main>
+  <script src="popup.js"></script>
+</body>
+
+</html>
