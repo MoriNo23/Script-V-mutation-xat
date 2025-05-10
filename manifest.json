@@ -8,16 +8,20 @@
   },
   "browser_action": {
     "default_popup": "popup/popup.html",
-    "default_icon": "icon.png"
+    "default_icon": "popup/icon.png"
   },
   "permissions": ["activeTab"],
   "content_scripts": [
     {
-      "matches": ["*://*xat.com*"],
+      "matches": ["*://*.xat.com/*"],
       "js": ["content.js"],
       "all_frames": true
     }
   ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
   "browser_specific_settings": {
     "gecko": {
       "id": "{58b3d88b-da83-4c5d-a275-52ccd9be5945}"

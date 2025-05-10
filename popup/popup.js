@@ -2,7 +2,9 @@ const config = {
   buscar1: "",
   buscar2: "",
   buscar3: "",
+  reset: 0,
 };
+let contandor;
 
 document.getElementById("miform").addEventListener("submit", function (event) {
   // Prevenir el envío del formulario
@@ -35,4 +37,10 @@ document.getElementById("reset").addEventListener("click", () => {
     // Enviar un mensaje al script de contenido en la pestaña activa
     browser.tabs.sendMessage(tabId, { objeto: config });
   });
+});
+
+browser.runtime.onMessage.addListener((message) => {
+  console.log(message.contador);
+  console.log("Elemento p:", document.querySelector("p"));
+  document.querySelector("p").textContent = message.contador;
 });
